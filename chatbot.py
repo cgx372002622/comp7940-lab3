@@ -32,6 +32,7 @@ def main():
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("add", add))
     dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("hello", hello))
     # To start the bot:
     updater.start_polling()
     updater.idle()
@@ -41,6 +42,11 @@ def echo(update, context):
     logging.info("Update: " + str(update))
     logging.info("context: " + str(context))
     context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
+
+def hello(update, context):
+    if context == 'Kevin':
+        reply_message = 'Good day, Kevin!'
+        context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
