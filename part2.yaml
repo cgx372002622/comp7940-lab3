@@ -1,7 +1,6 @@
 version: '3'
 services:
   chatbot:
-    image: comp7940-chatbot
     environment:
       - TELEGRAM_ACCESS_TOKEN=6065911282:AAGGO0FXc_dhrXbGVJA-sNme2GBCvZ3xldo
       - REDIS_HOST=redis-16967.c299.asia-northeast1-1.gce.cloud.redislabs.com
