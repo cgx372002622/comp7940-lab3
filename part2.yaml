@@ -1,0 +1,14 @@
+version: '3'
+services:
+  chatbot:
+    image: comp7940-chatbot
+    environment:
+      - TELEGRAM_ACCESS_TOKEN=6065911282:AAGGO0FXc_dhrXbGVJA-sNme2GBCvZ3xldo
+      - REDIS_HOST=redis-16967.c299.asia-northeast1-1.gce.cloud.redislabs.com
+      - REDIS_PASSWORD=Ue9mnJjjnHf0HwwXbyQzsSl9udEf97u8
+      - REDIS_REDISPORT=16967
+      - CHATGPT_MODELNAME=gpt-35-turbo-16k
+      - CHATGPT_ACCESS_TOKEN=5edc988a-5fa4-4638-ae98-ea749e1a86aa
+      - CHATGPT_BASICURL=https://chatgpt.hkbu.edu.hk/general/rest
+      - CHATGPT_APIVERSION=2024-02-15-preview
+    build: .
